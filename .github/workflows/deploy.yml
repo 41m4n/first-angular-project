@@ -40,5 +40,5 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             sudo rm -rf ${{ secrets.NGINX_PATH }}/*
-            sudo cp -r /home/${{ secrets.EC2_USER }}/angular-deploy/* ${{ secrets.NGINX_PATH }}
+            sudo cp -r /home/${{ secrets.EC2_USER }}/angular-deploy/dist/first-app/browser/* ${{ secrets.NGINX_PATH }}
             sudo systemctl restart nginx
