@@ -7,7 +7,11 @@
  */
 
 import {ApplicationConfig} from '@angular/core';
+import { materialProviders } from './material.config';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 export const appConfig: ApplicationConfig = {
-  providers: [],
+  providers: [
+  materialProviders,
+  provideAnimations()],
 };

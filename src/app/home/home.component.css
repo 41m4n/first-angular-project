@@ -34,3 +34,118 @@ button {
       grid-template-columns: 1fr;
   }    
 }
+
+.thumbnail-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 16px;
+  gap: 30px;
+  padding: 8px;
+}
+
+.thumbnail {
+  width: 30%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.home-section {
+  background: var(--mat-background, #f5f5f5); /* fallback if no theme */
+  color: var(--mat-body-text-color, #000);
+}
+
+mat-card {
+  border-radius: 0 !important; /* removes rounded corners */
+}
+
+.custom-divider {
+  width: 98%;           /* Control the length */
+  margin: 16px auto;    /* Center horizontally */
+}
+
+.centered-card {
+  width: 80%;
+  margin: 0 auto; /* horizontally center */
+}
+
+.header-center {
+  justify-content: center; /* Flexbox: center children horizontally */
+}
+
+mat-card-title {
+  text-align: center;
+}
+
+mat-card-content {
+  display: flex;
+  text-align: justify;
+  justify-content: center; /* Horizontal */
+  align-items: center;     /* Vertical (if height is set) */
+  flex-direction: column;  /* Stack elements vertically */
+
+    .mat-card-content-text-container {
+    display: flex;
+    width: 80%;
+    text-align: justify;
+    justify-content: center; /* Horizontal */
+    align-items: center;     /* Vertical (if height is set) */
+    flex-direction: column;  /* Stack elements vertically */
+  }
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap: 1rem;
+  position: relative;
+}
+
+.text-container {
+  flex: 1 1 100%;
+  max-width: 60%;
+  text-align: justify;
+  padding: 0 1rem;
+}
+
+.side-image {
+  width: 120px;
+  height: auto;
+}
+
+.left {
+  order: 2; /* Show after text on small screens */
+}
+
+.right {
+  order: 3; /* Show after left image */
+}
+
+h2 {
+  /* optional: if you want to control width */
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .flex-container {
+    flex-wrap: nowrap;
+  }
+
+  .left {
+    order: 1;
+  }
+
+  .text-container {
+    order: 2;
+    flex: 1 1 auto;
+  }
+
+  .right {
+    order: 3;
+  }
+}

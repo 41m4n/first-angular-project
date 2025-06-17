@@ -1,54 +1,35 @@
 import {Component,inject} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {HousingLocationComponent} from '../housing-location/housing-location.component';
-import {HousingLocation} from '../housinglocation';
-import {HousingService} from '../housing.service';
+import {MatCardModule} from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
+import {MatDividerModule} from '@angular/material/divider';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, HousingLocationComponent],
-  template: `
-    <section>
-      <form>
-        <input type="text" placeholder="Filter by city" #filter />
-        <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
-      </form>
-    </section>
-    <section class="results">
-      <app-housing-location
-        *ngFor="let housingLocation of filteredLocationList"
-        [housingLocation]="housingLocation"
-      ></app-housing-location>
-    </section>
-  `,
+  imports: [CommonModule, MatCardModule, MatGridListModule, MatDividerModule],
+  // template: `
+  //   <section>
+  //     <form>
+  //       <input type="text" placeholder="Filter by city" #filter />
+  //       <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
+  //     </form>
+  //   </section>
+  //   <section class="results">
+  //     <app-housing-location
+  //       *ngFor="let housingLocation of filteredLocationList"
+  //       [housingLocation]="housingLocation"
+  //     ></app-housing-location>
+  //   </section>
+  // `,
+  templateUrl : './home.component.html',
   styleUrls: [`./home.component.css`],
 })
 export class HomeComponent {
-  
-  housingLocationList: HousingLocation[] = [];
-  housingService: HousingService = inject(HousingService);  
-  filteredLocationList: HousingLocation[] = [];
-
-  constructor() {
-    this.housingService.getAllHousingLocations().then((housingLocationList: HousingLocation[]) => {
-      this.housingLocationList = housingLocationList;
-      this.filteredLocationList = housingLocationList;
-    });
-  }
-
-  filterResults(text: string) {
-    if (!text) {
-      this.filteredLocationList = this.housingLocationList;
-      return;
-    }
-
-    this.filteredLocationList = this.housingLocationList.filter((housingLocation) =>
-      housingLocation?.city.toLowerCase().includes(text.toLowerCase()),
-    );
-  }
-
-  // readonly baseUrl = 'https://angular.dev/assets/images/tutorials/common';
-  //   housingLocationList: HousingLocation[] = [
+  images = [
+  '../../assets/angular.svg',
+  '../../assets/angular.svg',
+  '../../assets/logo.svg',
+];  
   //   {
   //     id: 0,
   //     name: 'Acme Fresh Start Housing',

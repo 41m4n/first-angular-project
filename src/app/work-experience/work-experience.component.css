@@ -1,0 +1,55 @@
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap: 1rem;
+  position: relative;
+}
+
+.text-container {
+  flex: 1 1 100%;
+  max-width: 60%;
+  text-align: justify;
+  padding: 0 1rem;
+}
+
+.side-image {
+  width: 120px;
+  height: auto;
+}
+
+.left {
+  order: 2; /* Show after text on small screens */
+}
+
+.right {
+  order: 3; /* Show after left image */
+}
+
+h2 {
+  /* optional: if you want to control width */
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .flex-container {
+    flex-wrap: nowrap;
+  }
+
+  .left {
+    order: 1;
+  }
+
+  .text-container {
+    order: 2;
+    flex: 1 1 auto;
+  }
+
+  .right {
+    order: 3;
+  }
+}
