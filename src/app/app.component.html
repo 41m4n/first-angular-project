@@ -1,13 +1,57 @@
-<mat-toolbar color="primary" class="top-toolbar">
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav mode="side" opened>
+    <div class="sidenav-header">
+      <img src="assets/angular.svg" alt="Profile" class="profile-img">
+    </div>
 
-  <p class="title">Resume</p>
+    <mat-nav-list>
+      <a mat-list-item href="#home">Home</a>
+      <a mat-list-item href="#about">About</a>
+      <a mat-list-item href="#education">Education</a>
+      <a mat-list-item href="#experience">Experience</a>
+      <a mat-list-item href="#skills">Skills</a>
+      <a mat-list-item href="#contact">Contact</a>
+    </mat-nav-list>
+  </mat-sidenav>
 
-</mat-toolbar>
+  <mat-sidenav-content>
+    <div class="content">
+      <!-- sections instead of router-outlet -->
+      <section id="home">
+        <h1>Welcome to My Resume</h1>
+        <p>
+          Dedicated and experienced Software Developer with a strong foundation in back-end development
+  and database management. Proficient in C# .NET Core, database technologies like MongoDB and
+  MySQL. A proactive problem-solver with a proven track record of delivering high-quality results
+  within deadlines. Passionate about continuous learning and contributing to innovative projects that
+  drive business success.
+        </p>
+      </section>
 
-<main class="content mat-app-background">
-  <section id="home"><app-home></app-home></section>
-  <section id="work-experience"><app-work-experience></app-work-experience></section>
-  <section id="education"><app-education></app-education></section>
-  <!-- <router-outlet></router-outlet> -->
-</main>
+      <section id="about">
+        <h2>About Me</h2>
+        <p>Write your background here.</p>
+      </section>
 
+      <section id="education">
+        <h2>Education</h2>
+        <p>Details about your studies.</p>
+      </section>
+
+      <section id="experience">
+        <h2>Experience</h2>
+        <p>Work history / projects.</p>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <p>List your skills here.</p>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Your email / social links.</p>
+      </section>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

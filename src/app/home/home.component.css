@@ -105,11 +105,20 @@ mat-card-content {
   position: relative;
 }
 
+.flex-cotainer-2 {  
+  padding: 1rem;
+  gap: 1rem;
+}
+
 .text-container {
   flex: 1 1 100%;
-  max-width: 60%;
+  max-width: 100%;
   text-align: justify;
   padding: 0 1rem;
+}
+
+.text-container mat-divider {
+  margin-bottom: 20px;
 }
 
 .side-image {
@@ -129,6 +138,23 @@ h2 {
   /* optional: if you want to control width */
   width: 100%;
   text-align: center;
+  font-size: 5rem;
+}
+
+.info-pair {
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+  margin-bottom: 8px;
+}
+
+.label {
+  width: 100px; /* same width for all labels */
+  font-weight: bold;
+}
+
+.value {
+  flex: 1;
 }
 
 @media (min-width: 768px) {
