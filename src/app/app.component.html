@@ -1,5 +1,5 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav mode="side" opened>
+  <mat-sidenav class="app-sidenav" mode="side" opened>
     <div class="sidenav-header">
       <img src="assets/angular.svg" alt="Profile" class="profile-img">
     </div>
@@ -20,9 +20,9 @@
       <section id="home">
         <h1>Welcome to My Resume</h1>
         <p>
-          Dedicated and experienced Software Developer with a strong foundation in back-end development
-  and database management. Proficient in C# .NET Core, database technologies like MongoDB and
-  MySQL. A proactive problem-solver with a proven track record of delivering high-quality results
+          Dedicated and experienced Software Developer with a strong foundation in <strong>back-end</strong> development
+  and <strong>management</strong>. Proficient in <strong>C# .NET Core</strong>, database technologies like <strong>MongoDB</strong> and
+  <strong>MySQL</strong>. A proactive problem-solver with a proven track record of delivering high-quality results
   within deadlines. Passionate about continuous learning and contributing to innovative projects that
   drive business success.
         </p>
@@ -30,17 +30,120 @@
 
       <section id="about">
         <h2>About Me</h2>
-        <p>Write your background here.</p>
+          
+        <div class="personal-details">
+          <div class="details-column">
+            <div class="detail"><span class="label">Name:</span><span class="value">Muhammad Aiman</span></div>
+            <div class="detail"><span class="label">Email:</span><span class="value">aimanshokri&#64;gmail.com</span></div>
+            <div class="detail"><span class="label">Phone:</span><span class="value">+60 12-345 6789</span></div>
+          </div>
+          <div class="details-column">
+            <div class="detail"><span class="label">Location:</span><span class="value">Alor Setar, Kedah, Malaysia</span></div>
+            <div class="detail"><span class="label">LinkedIn:</span><span class="value"><a href="https://linkedin.com/in/aiman" target="_blank">linkedin.com/in/aiman</a></span></div>
+            <div class="detail"><span class="label">GitHub:</span><span class="value"><a href="https://github.com/aiman" target="_blank">github.com/aiman</a></span></div>
+          </div>
+        </div>
       </section>
 
       <section id="education">
         <h2>Education</h2>
-        <p>Details about your studies.</p>
+
+        <div class="education-school-name-and-period-container">
+          <div class="education-school-name-container">
+            <h3>Universiti Sains Malaysia</h3>
+            <img src="assets/education-usm.png" alt="USM Logo" class="education-school-logo">
+          </div>
+          <div class="education-period-container">
+            <strong>2013 - 2017</strong>
+          </div>
+        </div>
+        <div class="education-details">
+          <ul>
+            <li>Bachelor's Degree of Computer Science</li>
+          </ul>
+        </div>
+
+        <div class="education-school-name-and-period-container">
+          <div class="education-school-name-container">
+            <h3>Kedah Matriculation College</h3>
+            <img src="assets/education-kmk.png" alt="KMK Logo" class="education-school-logo">
+          </div>
+          <div class="education-period-container">
+            <strong>2012 - 2013</strong>
+          </div>
+        </div>
+        <div class="education-details">
+          <ul>
+            <li>Sijil Matrikulasi</li>
+          </ul>
+        </div>
+
+        <div class="education-school-name-and-period-container">
+          <div class="education-school-name-container">
+            <h3>Kolej Sultan Abdul Hamid</h3>
+            <img src="assets/education-sahc.png" alt="SAHC Logo" class="education-school-logo">
+          </div>
+          <div class="education-period-container">
+            <strong>2007 - 2011</strong>
+          </div>
+        </div>
+        <div class="education-details">
+          <ul>
+            <li>Sijil Pelajaran Malaysia (SPM)</li>
+          </ul>
+        </div>
+
       </section>
 
       <section id="experience">
+
         <h2>Experience</h2>
-        <p>Work history / projects.</p>
+
+        <div class="experience-company-name-and-period-container">
+          <div class="experience-company-name-container">
+            <h3>Megan Jewellery Sdn Bhd</h3>
+            <img src="assets/experience-megan.png" alt="Megan Logo" class="experience-company-logo">
+          </div>
+          <div class="experience-period-container">
+            <strong>2021 - 2025</strong>
+          </div>
+        </div>
+        <h4>Backend Web Developer</h4>
+        <div class="experience-details">
+          <ul>
+            <li>Developed and maintained APIs using C# .NET Core, enhancing E-commerce platform functionality.</li>
+            <li>Designed and optimized MongoDB databases, including advanced aggregation pipelines for complex data handling.</li>
+            <li>Integrated third-party services and APIs such as BillPlz and PulzePay to expand platform capabilities.</li>
+            <li>Conducted testing and bug fixing to ensure high-quality deliverables and system reliability.</li>
+            <li>Develop internal web app for logistics of the operation from start to end user.</li>
+            <li>Developing a custom e-commerce platform using MedusaJS and Next.js for backend.</li>
+            <li>Integrate API testing using Postman into Github Action workflows for automated CI/CD.</li>
+          </ul>
+        </div>
+
+        <div class="experience-company-name-and-period-container">
+          <div class="experience-company-name-container">
+            <h3>Infoyana Sdn Bhd</h3>
+            <img src="assets/experience-infoyana.png" alt="Infoyana Logo" class="experience-company-logo">
+          </div>
+          <div class="experience-period-container">
+            <strong>2018 - 2021</strong>
+          </div>
+        </div>
+        <h4>Software Engineer</h4>
+        <div class="experience-details">
+          <ul>
+            <li>Worked on IoT projects focused on SmartHome solutions, programming gateways with C# using .NET Framework and .NET Core.</li>
+            <li>Programmed on BeagleBoneBlack boards in Linux (Ubuntu) environments, utilizing bash scripting for console applications.</li>
+            <li>Integrate IoT devices, including IR Blasters, Smart Door Locks, and Smart Alarm Controls, adhering to timelines 
+and client requirements.</li>
+            <li>Develop and maintain their existing internal testing program using C# WinForm, adding UI Form interface and 
+functionalities for their new devices.</li>
+            <li>Maintain and optimized MySQL, Firebird SQL database.</li>
+            <li>Liaise with L1/L2 to identify and solve issue or bug found.</li>
+          </ul>
+        </div>
+
       </section>
 
       <section id="skills">

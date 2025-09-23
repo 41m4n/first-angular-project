@@ -40,6 +40,11 @@ mat-sidenav {
   align-items: center;     /* centers the nav list horizontally */
 }
 
+mat-sidenav.app-sidenav {
+  border-right: 1px solid rgba(0,0,0,0.12);
+  box-sizing: border-box;
+}
+
 mat-nav-list {
   width: 100%;       /* stretch to full width so text stays aligned */
 }
@@ -75,4 +80,184 @@ mat-sidenav-container.sidenav-container {
   margin-top: 1rem;
   margin-bottom: 1rem; /* space after each paragraph */
   line-height: 1.6;    /* better readability */
+}
+
+
+
+
+
+#about {
+  padding: 2rem;
+}
+
+#about h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+#about p {
+  line-height: 1.6;
+}
+
+.personal-details {
+  display: flex;
+  gap: 2rem; /* space between columns */
+  margin-top: 1.5rem;
+}
+
+.details-column {
+  flex: 1;
+}
+
+.detail {
+  display: grid;
+  grid-template-columns: 80px auto; /* label fixed, value flexible */
+  margin-bottom: 0.5rem;
+}
+
+.label {
+  font-weight: bold;
+  color: #333;
+}
+
+.value {
+  color: #555;
+}
+
+.value a {
+  text-decoration: none;
+  color: #1976d2;
+}
+
+
+
+
+
+#education {
+  padding: 2rem;
+}
+
+#education h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+#education p {
+  line-height: 1.6;
+}
+
+.education-details {
+  display: flex;
+  gap: 2rem; /* space between columns */
+  margin-bottom: 1.5rem;
+}
+
+.education-details ul {
+  margin: 0;        /* remove default browser margin */
+  padding-left: 1.2rem; /* give consistent space for bullets */
+}
+
+.education-details li {
+  margin: 0.3rem 0; /* spacing between items */
+}
+
+.education-school-name-and-period-container{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.education-school-name-container{
+  display:flex;
+  flex: 1 1 50%;
+  align-items: center; /* vertical alignment */
+  gap: 0.5rem;         /* space between text and image */
+}
+
+.education-school-name{
+  flex: 1 1 50%;
+}
+
+.education-school-logo{
+  width: 100px;  /* small size next to text */
+  height: 50px;
+  object-fit: contain;
+}
+
+.education-school-name{
+  flex: 1 1 50%;
+}
+
+.education-period-container{
+  display:flex;
+  flex: 1;
+  align-items: center; /* vertical alignment */
+  justify-content: end;
+}
+
+
+
+#experience {
+  padding: 2rem;
+}
+
+#experience h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+#experience p {
+  line-height: 1.6;
+}
+
+.experience-details {
+  display: flex;
+  gap: 2rem; /* space between columns */
+  margin-bottom: 1.5rem;
+}
+
+.experience-details ul {
+  margin: 0;        /* remove default browser margin */
+  padding-left: 1.2rem; /* give consistent space for bullets */
+}
+
+.experience-details li {
+  margin: 0.3rem 0; /* spacing between items */
+}
+
+.experience-company-name-and-period-container{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.experience-company-name-container{
+  display:flex;
+  flex: 1 1 50%;
+  align-items: center; /* vertical alignment */
+  gap: 0.5rem;         /* space between text and image */
+}
+
+.experience-company-name{
+  flex: 1 1 50%;
+}
+
+.experience-company-logo{
+  width: 100px;  /* small size next to text */
+  height: 50px;
+  object-fit: contain;
+}
+
+.experience-company-name{
+  flex: 1 1 50%;
+}
+
+.experience-period-container{
+  display:flex;
+  flex: 1;
+  align-items: center; /* vertical alignment */
+  justify-content: end;
 }
