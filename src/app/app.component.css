@@ -123,11 +123,20 @@ mat-sidenav-container.sidenav-container {
 
 .value {
   color: #555;
+  display: flex;          /* make value a flexbox */
+  align-items: flex-start; /* align contents to the top */
+  gap: 0.4rem;            /* spacing between icon and text if needed */
 }
 
 .value a {
   text-decoration: none;
   color: #1976d2;
+}
+
+.value img {
+  width: 20px;
+  height: 20px;
+  display: block;         /* prevents baseline offset */
 }
 
 
@@ -261,3 +270,98 @@ mat-sidenav-container.sidenav-container {
   align-items: center; /* vertical alignment */
   justify-content: end;
 }
+
+#skills {
+  padding: 2rem;
+}
+
+#skills h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+#skills p {
+  line-height: 1.6;
+}
+
+.skills-details {
+  display: flex;
+  gap: 2rem; /* space between columns */
+  margin-bottom: 1.5rem;
+}
+
+.skills-details ul {
+  margin: 0;        /* remove default browser margin */
+  padding-left: 1.2rem; /* give consistent space for bullets */
+}
+
+.skills-details li {
+  margin: 0.3rem 0; /* spacing between items */
+}
+
+
+#activities {
+  padding: 2rem;
+}
+
+#activities h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+#activities p {
+  line-height: 1.6;
+}
+
+.activities-details {
+  display: flex;
+  gap: 2rem; /* space between columns */
+  margin-bottom: 1.5rem;
+}
+
+.activities-details ul {
+  margin: 0;        /* remove default browser margin */
+  padding-left: 1.2rem; /* give consistent space for bullets */
+}
+
+.activities-details li {
+  margin: 0.3rem 0; /* spacing between items */
+}
+
+.activities-name-and-period-container{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.activities-name-container{
+  display:flex;
+  flex: 1 1 50%;
+  align-items: center; /* vertical alignment */
+  gap: 0.5rem;         /* space between text and image */
+}
+
+.activities-name{
+  flex: 1 1 50%;
+}
+
+.activities-logo{
+  width: 100px;  /* small size next to text */
+  height: 50px;
+  object-fit: contain;
+}
+
+.activities-name{
+  flex: 1 1 50%;
+}
+
+.activities-period-container{
+  display:flex;
+  flex: 1;
+  align-items: center; /* vertical alignment */
+  justify-content: end;
+}
+
+
