@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ChangeDetectionStrategy} from '@angular/core';
 import {HomeComponent} from './home/home.component';
 import {WorkExperienceComponent} from './work-experience/work-experience.component';
 import {EducationComponent} from './education/education.component';
@@ -26,11 +26,12 @@ import { CommonModule } from '@angular/common';
   //     </section>
   //   </main>
   // `,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'homes';
+  title = 'Resume';
   isSmallScreen = false;
 
   constructor(private breakpointObserver: BreakpointObserver) {

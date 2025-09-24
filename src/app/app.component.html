@@ -1,5 +1,5 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav class="app-sidenav" mode="side" opened>
+  <mat-sidenav class="app-sidenav" #drawer [mode]="isSmallScreen ? 'over' : 'side'" [opened]="!isSmallScreen">
     <div class="sidenav-header">
       <img src="assets/profile-picture.jpg" alt="Profile" class="profile-img">
     </div>
@@ -16,10 +16,16 @@
   </mat-sidenav>
 
   <mat-sidenav-content>
+    <mat-toolbar class="top-toolbar" color="primary">
+      <!-- hamburger only on small screens -->
+      <button class="menu-button" *ngIf="isSmallScreen" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <h1><strong>Resume</strong></h1>
+    </mat-toolbar>
     <div class="content">
       <!-- sections instead of router-outlet -->
       <section id="home">
-        <h1>Welcome to My Resume</h1>
         <p>
           Dedicated and experienced Software Developer with a strong foundation in <strong>back-end</strong> development
   and <strong>management</strong>. Proficient in <strong>C# .NET Core</strong>, database technologies like <strong>MongoDB</strong> and
