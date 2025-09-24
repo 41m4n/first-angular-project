@@ -82,6 +82,22 @@ mat-sidenav-container.sidenav-container {
 
 
 
+#summary {
+  padding: 2rem;
+}
+
+#summary h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+#summary p {
+  line-height: 1.6;
+}
+
+
+
 
 
 #about {
@@ -106,6 +122,17 @@ mat-sidenav-container.sidenav-container {
 
 .details-column {
   flex: 1;
+}
+
+@media (max-width: 600px) {
+  .personal-details {
+    flex-direction: column; /* stack columns vertically */
+    gap: 0;              /* reduce spacing for mobile */
+  }
+
+  .details-column {
+    width: 100%; /* take full width on mobile */
+  }
 }
 
 .detail {
@@ -176,6 +203,13 @@ mat-sidenav-container.sidenav-container {
   margin-bottom: 0.5rem;
 }
 
+@media (max-width: 600px) {
+  .education-school-name-and-period-container {
+    flex-direction: column;
+    align-items: flex-start; /* align left when stacked */
+  }
+}
+
 .education-school-name-container{
   display:flex;
   flex: 1 1 50%;
@@ -239,6 +273,13 @@ mat-sidenav-container.sidenav-container {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .experience-company-name-and-period-container {
+    flex-direction: column;
+    align-items: flex-start; /* align left when stacked */
+  }
 }
 
 .experience-company-name-container{
@@ -332,6 +373,13 @@ mat-sidenav-container.sidenav-container {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .activities-name-and-period-container {
+    flex-direction: column;
+    align-items: flex-start; /* align left when stacked */
+  }
 }
 
 .activities-name-container{
