@@ -1,10 +1,10 @@
-import {Component, ChangeDetectionStrategy} from '@angular/core';
+import {Component, ChangeDetectionStrategy, ViewChild, AfterViewInit} from '@angular/core';
 import {HomeComponent} from './home/home.component';
 import {WorkExperienceComponent} from './work-experience/work-experience.component';
 import {EducationComponent} from './education/education.component';
 import { TestNavigationComponent } from './test-navigation/test-navigation.component';
 import {RouterLink, RouterOutlet} from '@angular/router';
-import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSidenavModule, MatSidenav} from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
@@ -34,10 +34,20 @@ export class AppComponent {
   title = 'Resume';
   isSmallScreen = false;
 
+   @ViewChild('sidenav') sidenav!: MatSidenav;
+
   constructor(private breakpointObserver: BreakpointObserver) {
     this.breakpointObserver.observe([Breakpoints.Handset])
       .subscribe(result => {
-        this.isSmallScreen = result.matches;
+        if (result.matches) {
+        // Small screen → overlay mode + close by default
+        this.sidenav.mode = 'over';
+        this.sidenav.close();
+      } else {
+        // Large screen → side mode + open by default
+        this.sidenav.mode = 'side';
+        this.sidenav.open();
+      }
       });
   }
 }

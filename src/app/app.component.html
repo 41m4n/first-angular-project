@@ -1,5 +1,5 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav class="app-sidenav" #drawer [mode]="isSmallScreen ? 'over' : 'side'" [opened]="!isSmallScreen">
+  <mat-sidenav class="app-sidenav" #sidenav>
     <div class="sidenav-header">
       <img src="assets/profile-picture.jpg" alt="Profile" class="profile-img">
     </div>
@@ -18,7 +18,7 @@
   <mat-sidenav-content>
     <mat-toolbar class="top-toolbar" color="primary">
       <!-- hamburger only on small screens -->
-      <button class="menu-button" *ngIf="isSmallScreen" mat-icon-button (click)="drawer.toggle()">
+      <button class="menu-button" mat-icon-button (click)="sidenav.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
       <span class="title"><strong>Resume</strong></span>
@@ -166,34 +166,41 @@ functionalities for their new devices.</li>
         
         <h4>Programming</h4>
         <div class="skills-details">
-          <ul>
-            <li>C#, WinForm, ASP.Net, .Net, .Net Core, .NetFramework, EntityFramework</li>
+          <ul class="skills-list">
+            <li>C#</li>
+            <li>WinForm</li>
+            <li>ASP.Net</li>
+            <li>.Net</li>
+            <li>.Net Core</li>
+            <li>.Net Framework</li>
+            <li>Entity Framework</li>
           </ul>
         </div>
 
-        <h4>DataBase</h4>
+        <h4>Database</h4>
         <div class="skills-details">
-          <ul>
-            <li>MySQL, MongoDB</li>
+          <ul class="skills-list">
+            <li>MySQL</li>
+            <li>MongoDB</li>
           </ul>
         </div>
 
         <h4>Language</h4>
         <div class="skills-details">
-          <ul>
-            <li>Malay, English</li>
+          <ul class="skills-list">
+            <li>Malay</li>
+            <li>English</li>
           </ul>
         </div>
 
         
         <h4>Upskilling</h4>
         <div class="skills-details">
-          <div>
-            <ul>
-              <li>AWS, EC2</li>
-              <li>Angular</li>
-            </ul>
-          </div>
+          <ul class="skills-list">
+            <li>AWS</li>
+            <li>EC2</li>
+            <li>Angular</li>
+          </ul>
         </div>
       </section>
 
