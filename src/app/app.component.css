@@ -432,3 +432,20 @@ mat-sidenav-container.sidenav-container {
 }
 
 
+
+
+.portfolio-details {
+  display: flex;
+  gap: 2rem; /* space between columns */
+  margin-bottom: 1.5rem;
+}
+
+.portfolio-details ul {
+  margin: 0;        /* remove default browser margin */
+  padding-left: 1.2rem; /* give consistent space for bullets */
+}
+
+.portfolio-details li {
+  margin: 0.3rem 0; /* spacing between items */
+}
+

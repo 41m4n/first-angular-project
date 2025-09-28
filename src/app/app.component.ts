@@ -30,24 +30,27 @@ import { CommonModule } from '@angular/common';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   title = 'Resume';
   isSmallScreen = false;
 
-   @ViewChild('sidenav') sidenav!: MatSidenav;
+  @ViewChild('sidenav') sidenav!: MatSidenav;
 
-  constructor(private breakpointObserver: BreakpointObserver) {
-    this.breakpointObserver.observe([Breakpoints.Handset])
-      .subscribe(result => {
-        if (result.matches) {
-        // Small screen → overlay mode + close by default
+   
+  constructor(private breakpointObserver: BreakpointObserver) {}
+
+  ngAfterViewInit(): void {
+  this.breakpointObserver.observe([Breakpoints.Handset])
+    .subscribe(result => {
+      if (result.matches) {
+        // Small screen → overlay + collapsed
         this.sidenav.mode = 'over';
         this.sidenav.close();
       } else {
-        // Large screen → side mode + open by default
+        // Large screen → side + opened
         this.sidenav.mode = 'side';
         this.sidenav.open();
       }
-      });
+    });
   }
 }
