@@ -348,7 +348,7 @@ mat-sidenav-container.sidenav-container {
 
 .skills-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* exactly 3 equal columns */
+  grid-template-columns: repeat(3, minmax(100px,150px)); /* exactly 3 equal columns */
   gap: 1rem 2rem;
   list-style: disc;
   padding-left: 1.5rem; /* keep bullets aligned */
